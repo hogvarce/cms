@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use Yii;
 use app\models\Pages;
+use app\models\News;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -76,6 +77,33 @@ class AdminController extends Controller
           ]);
       }
     }
+
+    // public function actionNews()
+    // {
+    //   if (!\Yii::$app->user->isGuest) {
+    //       $dataProvider = new ActiveDataProvider([
+    //           'query' => News::find(),
+    //       ]);
+    //       return $this->render('news',
+    //         ['dataProvider' => $dataProvider,]
+    //       );
+    //   }
+    //
+    //   $model = new LoginForm();
+    //   if ($model->load(\Yii::$app->request->post()) && $model->login()) {
+    //       $dataProvider = new ActiveDataProvider([
+    //           'query' => Pages::find(),
+    //       ]);
+    //       return $this->render('index',
+    //         ['dataProvider' => $dataProvider,]
+    //       );
+    //   } else {
+    //       return $this->render('login', [
+    //           'model' => $model,
+    //       ]);
+    //   }
+    // }
+
 
     /**
      * Displays a single Pages model.

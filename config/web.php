@@ -7,6 +7,9 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'defaultRoute' => 'main/index',
+    'layout' => 'news',
+    'language' => 'ru-RU',
+    'sourceLanguage' => 'ru-RU',
     'components' => [
         'urlManager' => [
             'class' => 'yii\web\UrlManager',
@@ -15,9 +18,9 @@ $config = [
             // Disable r= routes
             'enablePrettyUrl' => true,
             'rules' => [
-              '<view:(admin)>' => 'admin/index',
-              '' => 'main/index',
-              '<view:[a-zA-Z0-9-]+>' => 'main/index',
+              '<constoller:(admin)>' => 'admin/index',
+              '<constoller:(news)>' => 'news/index',
+              '<constoller:[a-zA-Z0-9-]+>' => 'main/index',
             ],
         ],
         'request' => [
@@ -32,7 +35,7 @@ $config = [
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
+            'errorAction' => 'main/error',
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',

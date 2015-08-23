@@ -21,6 +21,8 @@ use yii\helpers\Url;
 
     <?= $form->field($model, 'slug')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'render_news')->checkbox() ?>
+
     <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'content')->widget(Widget::className(), [

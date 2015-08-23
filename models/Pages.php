@@ -33,7 +33,7 @@ class Pages extends \yii\db\ActiveRecord
         return [
             [['id', 'title', 'h1', 'slug', 'description', 'content'], 'required'],
             [['description', 'content'], 'string'],
-            [['id', 'parent_id'], 'integer'],
+            [['id', 'parent_id', 'render_news'], 'integer'],
             [['title', 'h1', 'slug'], 'string', 'max' => 100]
         ];
     }
@@ -45,12 +45,13 @@ class Pages extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
-            'h1' => 'H1',
-            'slug' => 'Slug',
-            'description' => 'Description',
-            'content' => 'Content',
-            'parent_id' => 'Parent ID',
+            'title' => 'Название',
+            'h1' => 'Заголовок',
+            'slug' => 'Адрес страницы',
+            'description' => 'Описание(для продвижения)',
+            'content' => 'Контент',
+            'parent_id' => 'Родительский ID',
+            'render_news' => 'Покавзывать новости на странице',
         ];
     }
 
